@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="sample">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/itextpdf-5.5.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/jfoenix-8.0.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/guava-31.1-jre.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JAVAFX-HOTEL-V2 (1).zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,32 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="HOTEL_INTELLIJ">
+    <output-path>$PROJECT_DIR$/out/artifacts/HOTEL_INTELLIJ</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="sample.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="HOTEL_INTELLIJ.jar">
+        <element id="module-output" name="JUNIOR_COAST" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRERIAS/guava-31.1-jre.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRERIAS/itextpdf-5.5.9.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRERIAS/javafx-sdk-16/lib/javafx-swt.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRERIAS/javafx-sdk-16/lib/javafx.base.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRERIAS/javafx-sdk-16/lib/javafx.controls.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRERIAS/javafx-sdk-16/lib/javafx.fxml.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRERIAS/javafx-sdk-16/lib/javafx.graphics.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRERIAS/javafx-sdk-16/lib/javafx.media.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRERIAS/javafx-sdk-16/lib/javafx.swing.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRERIAS/javafx-sdk-16/lib/javafx.web.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRERIAS/jfoenix-8.0.10.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRERIAS/mariadb-java-client-2.7.3.jar" path-in-jar="/" />
+      </element>
+    </root>
+  </artifact>
+</component>

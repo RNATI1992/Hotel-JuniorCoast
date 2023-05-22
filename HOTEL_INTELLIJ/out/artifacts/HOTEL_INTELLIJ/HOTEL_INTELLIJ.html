@@ -1,0 +1,43 @@
+<html><head>
+  <SCRIPT src="http://java.com/js/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'HOTEL_INTELLIJ.jnlp'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbedHOTEL_INTELLIJ_id() {
+        dtjava.embed(
+            {
+                id : 'HOTEL_INTELLIJ_id',
+                url : 'HOTEL_INTELLIJ.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '600',
+                height : '400'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedHOTEL_INTELLIJ_id);
+</script>
+
+</head><body>
+<h2>Test page for <b>HOTEL_INTELLIJ</b></h2>
+  <b>Webstart:</b> <a href='HOTEL_INTELLIJ.jnlp' onclick="return launchApplication('HOTEL_INTELLIJ.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>

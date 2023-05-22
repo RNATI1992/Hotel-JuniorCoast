@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root_anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.hotelController">
+   <ImageView fitHeight="35.0" fitWidth="149.0" layoutX="50.0" layoutY="465.0" opacity="0.38" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@img/bungalow-esquerra.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="42.0" fitWidth="270.0" layoutX="556.0" layoutY="458.0" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@img/bungalow-dreta.png" />
+      </image>
+   </ImageView>
+   <GridPane fx:id="gridpane" nodeOrientation="RIGHT_TO_LEFT" prefHeight="500.0" prefWidth="50.0" style="-fx-background-color: #ADFEE4;" AnchorPane.rightAnchor="650.0">
+     <columnConstraints>
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+     </columnConstraints>
+     <rowConstraints>
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+     </rowConstraints>
+      <children>
+         <Rectangle fx:id="rectangle_mov" arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="54.1" stroke="#f4f4f4" strokeType="INSIDE" width="25.0" GridPane.rowIndex="0">
+            <GridPane.margin>
+               <Insets left="-10.0" />
+            </GridPane.margin></Rectangle>
+         <Circle fx:id="circulo_mov" fill="#f4f4f4" radius="27.0" stroke="#f4f4f4" strokeType="INSIDE" GridPane.rowIndex="0">
+            <GridPane.margin>
+               <Insets left="-10.0" />
+            </GridPane.margin></Circle>
+         <ImageView fx:id="hotel_img" fitHeight="30.0" fitWidth="25.0" onMouseClicked="#move_effect" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="0">
+            <image>
+               <Image url="@img/hotel_prueba.png" />
+            </image>
+            <GridPane.margin>
+               <Insets left="10.0" />
+            </GridPane.margin>
+         </ImageView>
+         <ImageView fx:id="client_img" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#move_effect" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+            <image>
+               <Image url="@img/user-circle-regular.png" />
+            </image>
+            <GridPane.margin>
+               <Insets left="13.0" />
+            </GridPane.margin>
+         </ImageView>
+         <ImageView fx:id="equipatge_img" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#move_effect" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+            <image>
+               <Image url="@img/suitcase-rolling-solid.png" />
+            </image>
+            <GridPane.margin>
+               <Insets left="15.0" />
+            </GridPane.margin>
+         </ImageView>
+         <ImageView fx:id="habitacio_img" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#move_effect" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+            <image>
+               <Image url="@img/bed-solid.png" />
+            </image>
+            <GridPane.margin>
+               <Insets left="10.0" />
+            </GridPane.margin>
+         </ImageView>
+         <ImageView fx:id="img_5" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#move_effect" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+            <image>
+               <Image url="@img/print-solid.png" />
+            </image>
+            <GridPane.margin>
+               <Insets left="11.0" />
+            </GridPane.margin>
+         </ImageView>
+         <ImageView fx:id="factura_img" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#move_effect" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
+            <image>
+               <Image url="@img/reports.png" />
+            </image>
+            <GridPane.margin>
+               <Insets left="11.0" />
+            </GridPane.margin>
+         </ImageView>
+         <ImageView fx:id="closeImg" fitHeight="20.0" fitWidth="30.0" focusTraversable="true" onMouseClicked="#handle" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
+            <image>
+               <Image url="@img/door-open.png" />
+            </image>
+            <GridPane.margin>
+               <Insets left="10.0" />
+            </GridPane.margin>
+         </ImageView>
+      </children>
+   </GridPane>
+   <ImageView fitHeight="130.0" fitWidth="137.0" layoutX="295.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@img/logo_hotel.png" />
+      </image>
+   </ImageView>
+   <Line endX="294.0" layoutX="271.0" layoutY="110.0" opacity="0.42" startX="-100.0" stroke="#ee277a" />
+   <Pane fx:id="hotel_caixa_1" layoutX="53.0" prefHeight="500.0" prefWidth="647.0" visible="false">
+      <children>
+         <Pane layoutX="77.0" layoutY="124.0" prefHeight="317.0" prefWidth="469.0" style="-fx-background-color: #F4F4F4; -fx-background-radius: 5;">
+            <effect>
+               <DropShadow />
+            </effect>
+            <children>
+               <Line endX="-211.0" layoutX="333.0" layoutY="27.0" startX="4.0" stroke="#fb9b6a" />
+               <Label layoutX="168.0" layoutY="7.0" text="Registre Recepcionistes" textFill="#fc7157">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+               <TableView fx:id="UsuTaula" layoutX="5.0" layoutY="70.0" onMouseClicked="#OnMouseClickedUsuari" prefHeight="147.0" prefWidth="458.0">
+                 <columns>
+                   <TableColumn fx:id="colDniUsu" prefWidth="152.0" text="DNI/PASSAPORT" />
+                   <TableColumn fx:id="colEmailUsu" prefWidth="151.0" text="EMAIL" />
+                     <TableColumn fx:id="colEstatUsu" prefWidth="154.0" text="ESTAT" />
+                 </columns>
+               </TableView>
+               <ImageView fitHeight="16.0" fitWidth="12.0" layoutX="316.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/search-solid.png" />
+                  </image>
+               </ImageView>
+               <TextField fx:id="filtreUsuariTxt" layoutX="158.0" layoutY="37.0" />
+               <ImageView fitHeight="17.0" fitWidth="12.0" layoutX="254.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/trash-alt-regular.png" />
+                  </image>
+               </ImageView>
+               <Button fx:id="eliminaUsu" layoutX="276.0" layoutY="225.0" mnemonicParsing="false" onAction="#eliminaUsuClick" prefHeight="24.0" prefWidth="65.0" text="Rebutjar" textFill="#f71b1b">
+                  <font>
+                     <Font name="System Bold" size="11.0" />
+                  </font>
+               </Button>
+               <ImageView fitHeight="17.0" fitWidth="12.0" layoutX="115.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/check-solid.png" />
+                  </image>
+               </ImageView>
+               <Button fx:id="validaUsu" layoutX="137.0" layoutY="225.0" mnemonicParsing="false" onAction="#validaUsuClick" prefHeight="24.0" prefWidth="65.0" text="Validar" textFill="#40d7a2">
+                  <font>
+                     <Font name="System Bold" size="11.0" />
+                  </font>
+               </Button>
+               <Label fx:id="errorUsu" layoutX="106.0" layoutY="258.0" prefHeight="39.0" prefWidth="247.0" textFill="RED" wrapText="true" />
+            </children>
+         </Pane>
+         <ImageView fx:id="bell1" fitHeight="54.0" fitWidth="20.0" layoutX="600.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@img/bell-solid.png" />
+            </image>
+         </ImageView>
+         <Circle fill="RED" layoutX="587.0" layoutY="53.0" radius="7.0" stroke="RED" strokeType="INSIDE" visible="false" />
+         <Label fx:id="bellTxt1" layoutX="440.0" layoutY="35.0" prefHeight="23.0" prefWidth="150.0" textFill="RED" wrapText="true" />
+      </children>
+   </Pane>
+   <Pane fx:id="hotel_caixa_2" layoutX="53.0" prefHeight="500.0" prefWidth="647.0" visible="false">
+      <children>
+         <Pane layoutX="53.0" layoutY="131.0" prefHeight="171.0" prefWidth="539.0" style="-fx-background-color: #F4F4F4; -fx-background-radius: 5;">
+            <effect>
+               <DropShadow />
+            </effect>
+            <children>
+               <Line endX="403.0" layoutX="118.0" layoutY="31.0" opacity="0.75" startX="-100.0" stroke="#bd73f2" />
+               <Label layoutX="222.0" layoutY="6.0" text="Trobar Client" textFill="#b21af8">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="filtroClienteTxt" layoutX="171.0" layoutY="41.0" onKeyReleased="#filtroClienteReleased" prefHeight="1.0" prefWidth="149.0" />
+               <Label layoutX="126.0" layoutY="45.0" text="Client:" textFill="#b21af8" />
+               <TableView fx:id="tablaClientes" layoutX="6.0" layoutY="72.0" onMouseClicked="#OnMouseClickedClientes" prefHeight="91.0" prefWidth="528.0">
+                 <columns>
+                   <TableColumn fx:id="colDniCliente" prefWidth="75.0" text="DNI" />
+                   <TableColumn fx:id="colNomCliente" prefWidth="75.0" text="NOM" />
+                     <TableColumn fx:id="colApellCliente" prefWidth="75.0" text="COGNOMS" />
+                     <TableColumn fx:id="colNacioCliente" prefWidth="75.0" text="PAIS" />
+                     <TableColumn fx:id="colEmailCliente" prefWidth="75.0" text="EMAIL" />
+                     <TableColumn fx:id="colOcupacioCliente" prefWidth="75.0" text="OCUPACIO" />
+                     <TableColumn fx:id="colEstCivilCliente" prefWidth="75.0" text="ESTAT CIVIL" />
+                 </columns>
+               </TableView>
+               <ImageView fitHeight="16.0" fitWidth="12.0" layoutX="329.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/search-solid.png" />
+                  </image>
+               </ImageView>
+            </children>
+         </Pane>
+         <Pane layoutX="172.0" layoutY="317.0" prefHeight="147.0" prefWidth="420.0" style="-fx-background-color: #F4F4F4; -fx-background-radius: 5;">
+            <effect>
+               <DropShadow />
+            </effect>
+            <children>
+               <Label layoutX="48.0" layoutY="6.0" text="DNI:" textFill="#ee277a">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+               <Label layoutX="145.0" layoutY="7.0" text="Nom:" textFill="#ee277a">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+               <Label layoutX="232.0" layoutY="51.0" text="Nacionalitat:" textFill="#ee277a">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="dniTxtCliente" layoutX="12.0" layoutY="21.0" prefHeight="25.0" prefWidth="87.0" />
+               <TextField fx:id="nomTxtCliente" layoutX="114.0" layoutY="21.0" prefHeight="25.0" prefWidth="87.0" />
+               <TextField fx:id="nacioTxtCliente" layoutX="215.0" layoutY="65.0" prefHeight="25.0" prefWidth="87.0" />
+               <Label layoutX="241.0" layoutY="6.0" text="Telèfon:" textFill="#ee277a">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+               <Label layoutX="347.0" layoutY="6.0" text="E-mail:" textFill="#ee277a">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+               <Label layoutX="340.0" layoutY="51.0" text="Ocupació:" textFill="#ee277a">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="emailTxtCliente" layoutX="317.0" layoutY="21.0" prefHeight="25.0" prefWidth="87.0" />
+               <TextField fx:id="ocupacioTxtCliente" layoutX="317.0" layoutY="65.0" prefHeight="25.0" prefWidth="87.0" />
+               <Label layoutX="138.0" layoutY="52.0" text="Cognoms:" textFill="#ee277a">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+               <Label layoutX="36.0" layoutY="53.0" text="Estat civil:" textFill="#ee277a">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="cognomsTxtCliente" layoutX="114.0" layoutY="67.0" prefHeight="25.0" prefWidth="87.0" />
+               <TextField fx:id="estatCivilTxtCliente" layoutX="12.0" layoutY="67.0" prefHeight="25.0" prefWidth="87.0" />
+               <TextField fx:id="phoneTxtCliente" layoutX="216.0" layoutY="21.0" prefHeight="25.0" prefWidth="87.0" />
+               <Label fx:id="errorCliente" layoutX="12.0" layoutY="98.0" prefHeight="42.0" prefWidth="320.0" textFill="RED" wrapText="true" />
+            </children>
+         </Pane>
+         <Pane layoutX="52.0" layoutY="317.0" prefHeight="147.0" prefWidth="110.0" style="-fx-background-color: #F4F4F4; -fx-background-radius: 5;">
+            <effect>
+               <DropShadow />
+            </effect>
+            <children>
+               <ImageView fitHeight="16.0" fitWidth="12.0" layoutX="13.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/file-solid.png" />
+                  </image>
+               </ImageView>
+               <Button fx:id="nouCliente" layoutX="33.0" layoutY="41.0" mnemonicParsing="false" onAction="#nouClienteClick" prefHeight="24.0" prefWidth="62.0" text="Nou" textFill="#66c5bd">
+                  <font>
+                     <Font name="System Bold" size="11.0" />
+                  </font>
+               </Button>
+               <ImageView fitHeight="16.0" fitWidth="15.0" layoutX="13.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/new.png" />
+                  </image>
+               </ImageView>
+               <Button fx:id="insertCliente" layoutX="33.0" layoutY="10.0" mnemonicParsing="false" onAction="#insertClienteClick" prefHeight="24.0" prefWidth="62.0" text="Afegir" textFill="#66c5bd">
+                  <font>
+                     <Font name="System Bold" size="11.0" />
+                  </font>
+               </Button>
+               <ImageView fitHeight="30.0" fitWidth="15.0" layoutX="13.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/edit-regular.png" />
+                  </image>
+               </ImageView>
+               <Button fx:id="updateCliente" layoutX="33.0" layoutY="75.0" mnemonicParsing="false" onAction="#updateClienteClick" prefHeight="24.0" prefWidth="62.0" text="Modificar" textFill="#66c5bd">
+                  <font>
+                     <Font name="System Bold" size="11.0" />
+                  </font>
+               </Button>
+               <ImageView fitHeight="17.0" fitWidth="12.0" layoutX="14.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/trash-alt-regular.png" />
+                  </image>
+               </ImageView>
+               <Button fx:id="deleteCliente" layoutX="34.0" layoutY="107.0" mnemonicParsing="false" onAction="#deleteClienteClick" prefHeight="24.0" prefWidth="62.0" text="Eliminar" textFill="#66c5bd">
+                  <font>
+                     <Font name="System Bold" size="11.0" />
+                  </font>
+               </Button>
+            </children>
+         </Pane>
+      </children>
+   </Pane>
+   <Pane fx:id="hotel_caixa_3" layoutX="53.0" layoutY="1.0" prefHeight="500.0" prefWidth="647.0" visible="false">
+      <children>
+         <Label fx:id="bellTxt2" layoutX="440.0" layoutY="35.0" prefHeight="23.0" prefWidth="150.0" textFill="RED" wrapText="true" />
+         <ImageView fx:id="bell2" fitHeight="54.0" fitWidth="20.0" layoutX="600.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@img/bell-solid.png" />
+            </image>
+         </ImageView>
+         <Pane layoutX="62.0" layoutY="124.0" prefHeight="171.0" prefWidth="528.0" style="-fx-background-color: #F4F4F4; -fx-background-radius: 5;">
+            <effect>
+               <DropShadow />
+            </effect>
+            <children>
+               <Label layoutX="205.0" layoutY="6.0" text="Gestió Bungalows" textFill="#fb9b6a">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+               <TableView fx:id="gestioBungalows" layoutX="12.0" layoutY="69.0" prefHeight="91.0" prefWidth="504.0">
+                  <columns>
+                     <TableColumn fx:id="colN_Bungalow" prefWidth="101.0" text="N.BUNGALOW" />
+                     <TableColumn fx:id="colCaract" prefWidth="101.0" text="CARACT." />
+                     <TableColumn fx:id="colPreu" prefWidth="64.0" text="PREU" />
+                     <TableColumn fx:id="colEstat" prefWidth="99.0" text="ESTAT" />
+                     <TableColumn fx:id="colTipus" prefWidth="138.0" text="TIPUS" />
+                  </columns>
+               </TableView>
+               <TextField fx:id="filtroBungalowTxt" layoutX="196.0" layoutY="34.0" prefHeight="1.0" prefWidth="149.0" />
+               <Label layoutX="135.0" layoutY="38.0" text="Bungalow" textFill="#ffab19" />
+               <ImageView fitHeight="16.0" fitWidth="12.0" layoutX="354.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/search-solid.png" />
+                  </image>
+               </ImageView>
+               <ImageView fitHeight="20.0" fitWidth="16.0" layoutX="400.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/print-solid.png" />
+                  </image>
+               </ImageView>
+               <Button layoutX="425.0" layoutY="35.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="66.0" text="Imprimir" textFill="#f246c1">
+                  <font>
+                     <Font name="System Bold" size="11.0" />
+                  </font>
+               </Button>
+            </children>
+         </Pane>
+         <Pane layoutX="62.0" layoutY="309.0" prefHeight="130.0" prefWidth="120.0" style="-fx-background-color: #F4F4F4; -fx-background-radius: 5;">
+            <effect>
+               <DropShadow />
+            </effect>
+            <children>
+               <ImageView fitHeight="16.0" fitWidth="12.0" layoutX="21.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/file-solid.png" />
+                  </image>
+               </ImageView>
+               <Button fx:id="nouBungalow" layoutX="40.0" layoutY="38.0" mnemonicParsing="false" onAction="#nouBungalowClick" prefHeight="24.0" prefWidth="63.0" text="Nou" textFill="#66c5bd">
+                  <font>
+                     <Font name="System Bold" size="11.0" />
+                  </font>
+               </Button>
+               <ImageView fitHeight="16.0" fitWidth="15.0" layoutX="19.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/new.png" />
+                  </image>
+               </ImageView>
+               <ImageView fitHeight="30.0" fitWidth="15.0" layoutX="20.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/edit-regular.png" />
+                  </image>
+               </ImageView>
+               <Button fx:id="updateBungalow" layoutX="40.0" layoutY="68.0" mnemonicParsing="false" onAction="#updateBungalowClick" prefHeight="24.0" prefWidth="62.0" text="Modificar" textFill="#66c5bd">
+                  <font>
+                     <Font name="System Bold" size="11.0" />
+                  </font>
+               </Button>
+               <ImageView fitHeight="17.0" fitWidth="12.0" layoutX="20.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/trash-alt-regular.png" />
+                  </image>
+               </ImageView>
+               <Button fx:id="deleteBungalow" layoutX="40.0" layoutY="98.0" mnemonicParsing="false" onAction="#deleteBungalowClick" prefHeight="24.0" prefWidth="62.0" text="Eliminar" textFill="#66c5bd">
+                  <font>
+                     <Font name="System Bold" size="11.0" />
+                  </font>
+               </Button>
+               <Button fx:id="insertBungalow" layoutX="39.0" layoutY="9.0" mnemonicParsing="false" onAction="#insertBungalowClick" prefHeight="24.0" prefWidth="63.0" text="Afegir" textFill="#66c5bd">
+                  <font>
+                     <Font name="System Bold" size="11.0" />
+                  </font>
+               </Button>
+            </children>
+         </Pane>
+         <Pane layoutX="195.0" layoutY="309.0" prefHeight="130.0" prefWidth="395.0" style="-fx-background-color: #F4F4F4; -fx-background-radius: 5;">
+            <effect>
+               <DropShadow />
+            </effect>
+            <children>
+               <Label layoutX="52.0" layoutY="3.0" text="Nº.Bungalow:" textFill="#ee277a">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+               <Label layoutX="67.0" layoutY="50.0" text="Tipus:" textFill="#ee277a">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+               <Label layoutX="291.0" layoutY="4.0" text="Caracteristicas:" textFill="#ee277a">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="numBungalow" layoutX="36.0" layoutY="18.0" prefHeight="25.0" prefWidth="87.0" />
+               <Label layoutX="188.0" layoutY="3.0" text="Preu:" textFill="#ee277a">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+               <Label layoutX="186.0" layoutY="50.0" text="Estat:" textFill="#ee277a">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="preuBungalow" layoutX="155.0" layoutY="18.0" prefHeight="25.0" prefWidth="87.0" />
+               <ImageView fitHeight="15.0" fitWidth="16.0" layoutX="14.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/bed-solid.png" />
+                  </image>
+               </ImageView>
+               <ImageView fitHeight="15.0" fitWidth="16.0" layoutX="132.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/credit-card-regular.png" />
+                  </image>
+               </ImageView>
+               <Label fx:id="errorBungalow" alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="33.0" layoutY="98.0" prefHeight="23.0" prefWidth="348.0" textFill="RED" wrapText="true" />
+               <ComboBox fx:id="tipusComboBox" layoutX="36.0" layoutY="65.0" onAction="#selectTipus" prefHeight="25.0" prefWidth="87.0" />
+               <ComboBox fx:id="estatComboBox" layoutX="155.0" layoutY="65.0" onAction="#estatSelect" prefHeight="23.0" prefWidth="87.0" />
+               <TextArea fx:id="caracteristicasBungalow" layoutX="255.0" layoutY="19.0" prefHeight="71.0" prefWidth="127.0" wrapText="true" />
+            </children>
+         </Pane>
+      </children>
+   </Pane>
+   <Pane fx:id="hotel_caixa_4" layoutX="53.0" prefHeight="500.0" prefWidth="647.0">
+      <children>
+         <Pane fx:id="pane_hotel4" layoutX="14.0" layoutY="120.0" prefHeight="328.0" prefWidth="618.0" style="-fx-background-color: #F4F4F4; -fx-background-radius: 5;">
+            <effect>
+               <DropShadow />
+            </effect>
+            <children>
+               <ComboBox fx:id="combo_bungalow" layoutX="295.0" layoutY="244.0" prefHeight="25.0" prefWidth="82.0" />
+               <Label layoutX="312.0" layoutY="228.0" text="Bungalow:" textFill="#ee277a">
+                  <font>
+                     <Font size="11.0" />
+                  </font></Label>
+               <Label layoutX="47.0" layoutY="228.0" text="Client:" textFill="#ee277a">
+                  <font>
+                     <Font size="11.0" />
+                  </font>
+               </Label>
+               <ComboBox fx:id="combo_client" layoutX="19.0" layoutY="244.0" prefHeight="25.0" prefWidth="82.0" />
+               <DatePicker fx:id="txtDataEntrada" layoutX="198.0" layoutY="244.0" prefHeight="25.0" prefWidth="87.0" />
+               <Label layoutX="209.0" layoutY="228.0" text="Data Entrada:" textFill="#ee277a">
+                  <font>
+                     <Font size="11.0" />
+                  </font>
+               </Label>
+               <Label layoutX="210.0" layoutY="272.0" text="Data Sortida:" textFill="#ee277a">
+                  <font>
+                     <Font size="11.0" />
+                  </font>
+               </Label>
+               <Label layoutX="111.0" layoutY="228.0" text="Hora entrada:" textFill="#ee277a">
+                  <font>
+                     <Font size="11.0" />
+                  </font>
+               </Label>
+               <Label fx:id="combo_h_sortida" layoutX="113.0" layoutY="272.0" text="Hora sortida:" textFill="#ee277a">
+                  <font>
+                     <Font size="11.0" />
+                  </font>
+               </Label>
+               <DatePicker fx:id="txtDataSortida" layoutX="198.0" layoutY="287.0" prefHeight="25.0" prefWidth="87.0" />
+               <CheckBox fx:id="check_massatge" layoutX="492.0" layoutY="272.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Mas. Balines ( 50 €)" textFill="#5978e8">
+                  <font>
+                     <Font name="System Bold" size="10.0" />
+                  </font>
+               </CheckBox>
+               <ImageView fx:id="habitacio_1" fitHeight="14.0" fitWidth="16.0" layoutX="469.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/hands-solid.png" />
+                  </image>
+               </ImageView>
+               <CheckBox fx:id="check_spa" layoutX="492.0" layoutY="298.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="101.0" text="Pas a SPA ( 30 €)" textFill="#66c5bd">
+                  <font>
+                     <Font name="System Bold" size="10.0" />
+                  </font>
+               </CheckBox>
+               <ImageView fx:id="habitacio_11" fitHeight="13.0" fitWidth="16.0" layoutX="471.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/hot-tub-person-solid.png" />
+                  </image>
+               </ImageView>
+               <CheckBox fx:id="check_esmorzar" layoutX="492.0" layoutY="247.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="101.0" text="Esmorzar ( 25 € )" textFill="#fc7157">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </CheckBox>
+               <ImageView fx:id="habitacio_12" fitHeight="13.0" fitWidth="20.0" layoutX="471.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/utensils-solid.png" />
+                  </image>
+               </ImageView>
+               <Label layoutX="249.0" layoutY="4.0" text="Reserves de Bungalows" textFill="#ee277a">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+               <TableView fx:id="tabla_reserves" layoutX="6.0" layoutY="59.0" prefHeight="162.0" prefWidth="606.0">
+                  <columns>
+                     <TableColumn fx:id="t_numero" prefWidth="47.0" text="NUM" />
+                     <TableColumn fx:id="t_dni_client" prefWidth="72.0" text="DNI_CLIENT" />
+                     <TableColumn fx:id="t_dni_recepcionista" prefWidth="68.0" text="DNI_TREBALLADOR" />
+                     <TableColumn fx:id="t_data_entrada" prefWidth="67.0" text="DATA_ENTRADA" />
+                     <TableColumn fx:id="t_hora_entrada" prefWidth="85.0" text="HORA_ENTRADA" />
+                     <TableColumn fx:id="t_data_sortida" prefWidth="83.0" text="DATA_SORTIDA" />
+                     <TableColumn fx:id="t_hora_sortida" prefWidth="63.0" text="HORA_SORTIDA" />
+                     <TableColumn fx:id="t_preu" prefWidth="55.0" text="PREU" />
+                     <TableColumn fx:id="t_estat" prefWidth="65.0" text="ESTAT" />
+                  </columns>
+               </TableView>
+               <Label layoutX="521.0" layoutY="228.0" text="Extres:" textFill="#ee277a">
+                  <font>
+                     <Font name="System Bold" size="11.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="search_data_reserva" layoutX="217.0" layoutY="28.0" prefHeight="1.0" prefWidth="149.0" />
+               <Label layoutX="156.0" layoutY="32.0" text="Bungalow" textFill="#ee277a" />
+               <ImageView fitHeight="16.0" fitWidth="12.0" layoutX="375.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/search-solid.png" />
+                  </image>
+               </ImageView>
+               <Button layoutX="397.0" layoutY="27.0" mnemonicParsing="false" prefWidth="65.0" text="Trobar" textFill="#ee277a">
+                  <font>
+                     <Font name="System Bold" size="11.0" />
+                  </font>
+               </Button>
+               <Label layoutX="25.0" layoutY="271.0" text="Recepcionista:" textFill="#ee277a">
+                  <font>
+                     <Font size="11.0" />
+                  </font>
+               </Label>
+               <ComboBox fx:id="combo_recepcionista" layoutX="19.0" layoutY="287.0" prefHeight="25.0" prefWidth="82.0" />
+               <Label layoutX="393.0" layoutY="228.0" text="Preu Total:" textFill="#ee277a">
+                  <font>
+                     <Font size="11.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="preu_total" alignment="CENTER" disable="true" layoutX="387.0" layoutY="244.0" prefHeight="25.0" prefWidth="65.0" text="0 €" />
+               <JFXTimePicker fx:id="h_entrada" defaultColor="#ee277a" layoutX="113.0" layoutY="244.0" prefHeight="16.0" prefWidth="73.0" />
+               <JFXTimePicker fx:id="h_sortida" defaultColor="#ee277a" layoutX="113.0" layoutY="286.0" prefHeight="25.0" prefWidth="73.0" />
+            </children>
+         </Pane>
+         <VBox layoutX="170.0" layoutY="169.0">
+            <children>
+               <HBox />
+            </children>
+         </VBox>
+         <Button layoutX="333.0" layoutY="460.0" mnemonicParsing="false" style="-fx-background-color: #ffa6a6;" text="Cancel·lar" textFill="#0d0d0d">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Button>
+         <Button fx:id="afegirReserva" layoutX="230.0" layoutY="460.0" mnemonicParsing="false" onMouseClicked="#registreReserva" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: #ADFEE4;" text="Afegir">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Button>
+      </children>
+   </Pane>
+   <Pane fx:id="hotel_caixa_5" layoutX="52.0" layoutY="1.0" prefHeight="500.0" prefWidth="647.0" visible="false">
+      <children>
+         <Pane layoutX="32.0" layoutY="231.0" prefHeight="207.0" prefWidth="564.0" style="-fx-background-color: #F4F4F4; -fx-background-radius: 5;">
+            <effect>
+               <DropShadow />
+            </effect>
+            <children>
+               <Label layoutX="223.0" layoutY="6.0" text="Gestió de pagaments" textFill="#b21af8">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+               <Label layoutX="263.0" layoutY="101.0" text="Lorem ipsum" textFill="#d5bb33">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+               <TableView fx:id="tabla_comprovant" layoutX="12.0" layoutY="25.0" prefHeight="171.0" prefWidth="539.0">
+                  <columns>
+                     <TableColumn fx:id="t_dni_client_comprovant" editable="false" prefWidth="63.0" sortable="false" text="DNI" />
+                     <TableColumn fx:id="t_nom" prefWidth="69.0" text="NOM" />
+                     <TableColumn fx:id="t_cognoms" prefWidth="78.0" text="COGNOMS" />
+                     <TableColumn fx:id="t_data_sortida_comprovant" prefWidth="90.0" text="DATA_SORTIDA" />
+                     <TableColumn fx:id="t_hora_sortida_comprovant" prefWidth="75.0" text="HORA_SORTIDA" />
+                     <TableColumn fx:id="t_preu_comprovant" prefWidth="75.0" text="PREU_TOT" />
+                     <TableColumn fx:id="t_numero_comprovant" prefWidth="88.0" text="NUM_BUNG" />
+                  </columns>
+               </TableView>
+            </children>
+         </Pane>
+         <Pane layoutX="32.0" layoutY="131.0" prefHeight="91.0" prefWidth="564.0" style="-fx-background-color: #F4F4F4; -fx-background-radius: 5;">
+            <effect>
+               <DropShadow />
+            </effect>
+            <children>
+               <Line endX="434.0" layoutX="115.0" layoutY="28.0" opacity="0.75" startX="-100.0" stroke="#bd73f2" />
+               <Label layoutX="247.0" layoutY="6.0" text="Comprovant" textFill="#b21af8">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+               <TextField layoutX="220.0" layoutY="46.0" prefHeight="1.0" prefWidth="149.0" />
+               <Label layoutX="147.0" layoutY="50.0" text="DNI CLIENT:" textFill="#b21af8" />
+               <ImageView fitHeight="16.0" fitWidth="12.0" layoutX="378.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/search-solid.png" />
+                  </image>
+               </ImageView>
+            </children>
+         </Pane>
+         <Button layoutX="281.0" layoutY="460.0" mnemonicParsing="false" onAction="#btnImprimir" style="-fx-background-color: #a559c9;" text="Imprimir" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Button>
+      </children>
+   </Pane>
+   <Pane fx:id="hotel_caixa_6" layoutX="63.0" layoutY="10.0" prefHeight="500.0" prefWidth="647.0" visible="false">
+      <children>
+         <Pane layoutX="110.0" layoutY="255.0" prefHeight="155.0" prefWidth="410.0" style="-fx-background-color: #F4F4F4; -fx-background-radius: 5;">
+            <effect>
+               <DropShadow />
+            </effect>
+            <children>
+               <Text fill="RED" layoutX="159.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Campo Obligatorio">
+                  <font>
+                     <Font size="9.0" />
+                  </font>
+               </Text>
+               <Label layoutX="41.0" layoutY="12.0" text="Lorem ipsum" textFill="#66c5bd">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+               <Line endX="-100.0" endY="52.2587890625" layoutX="300.0" layoutY="27.0" startX="-100.0" stroke="#bd73f2" />
+               <Line endX="-100.0" endY="52.2587890625" layoutX="400.0" layoutY="27.0" startX="-100.0" stroke="#bd73f2" />
+               <Label layoutX="216.0" layoutY="10.0" text="Lorem ipsum" textFill="#fc7157">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+               <Label layoutX="263.0" layoutY="101.0" text="Lorem ipsum" textFill="#d5bb33">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+               <Label layoutX="315.0" layoutY="12.0" text="Lorem ipsum" textFill="#fb9b6a">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+               <ChoiceBox layoutX="23.0" layoutY="67.0" prefHeight="0.5" prefWidth="200.0" />
+            </children>
+         </Pane>
+         <Pane layoutX="110.0" layoutY="131.0" prefHeight="106.0" prefWidth="120.0" style="-fx-background-color: #F4F4F4; -fx-background-radius: 5;">
+            <effect>
+               <DropShadow />
+            </effect>
+            <children>
+               <Text fill="RED" layoutX="20.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Campo Obligatorio">
+                  <font>
+                     <Font size="9.0" />
+                  </font>
+               </Text>
+               <Line endX="-7.0" layoutX="116.0" layoutY="33.0" opacity="0.75" startX="-100.0" stroke="#bd73f2" />
+               <Label layoutX="26.0" layoutY="10.0" text="Lorem ipsum" textFill="#b21af8">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+               <CheckBox layoutX="38.0" layoutY="46.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="87.0" text=" Equipatge" textFill="#5978e8">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </CheckBox>
+               <ImageView fitHeight="16.0" fitWidth="15.0" layoutX="19.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@img/suitcase-rolling-solid.png" />
+                  </image>
+               </ImageView>
+            </children>
+         </Pane>
+         <Pane layoutX="255.0" layoutY="131.0" prefHeight="106.0" prefWidth="120.0" style="-fx-background-color: #F4F4F4; -fx-background-radius: 5;">
+            <effect>
+               <DropShadow />
+            </effect>
+            <children>
+               <Text fill="RED" layoutX="19.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Campo Obligatorio">
+                  <font>
+                     <Font size="9.0" />
+                  </font>
+               </Text>
+               <Line endX="-7.0" layoutX="116.0" layoutY="33.0" opacity="0.75" startX="-100.0" stroke="#bd73f2" />
+               <Label layoutX="26.0" layoutY="10.0" text="Lorem ipsum" textFill="#ee277a">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+            </children>
+         </Pane>
+         <Pane layoutX="399.0" layoutY="131.0" prefHeight="106.0" prefWidth="120.0" style="-fx-background-color: #F4F4F4; -fx-background-radius: 5;">
+            <effect>
+               <DropShadow />
+            </effect>
+            <children>
+               <Text fill="RED" layoutX="19.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="* Campo Obligatorio">
+                  <font>
+                     <Font size="9.0" />
+                  </font>
+               </Text>
+               <Line endX="-7.0" layoutX="113.0" layoutY="33.0" opacity="0.75" startX="-100.0" stroke="#bd73f2" />
+               <Label layoutX="26.0" layoutY="10.0" text="Lorem ipsum" textFill="#ee277a">
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+            </children>
+         </Pane>
+      </children>
+   </Pane>
+   <Line endX="598.0" layoutX="100.0" layoutY="2.0" startX="-100.0" stroke="#65c6bd" strokeWidth="4.0" />
+   <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="33.0" text="Button" textAlignment="CENTER" />
+   <ImageView fitHeight="50.0" fitWidth="250.0" layoutX="534.0" layoutY="450.0" opacity="0.39" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@img/palmera_main_3.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="91.0" fitWidth="23.0" layoutX="178.0" layoutY="442.0" opacity="0.27" pickOnBounds="true" preserveRatio="true" smooth="false">
+      <image>
+         <Image url="@img/palmera_main.png" />
+      </image>
+   </ImageView>
+   <ImageView fitHeight="29.0" fitWidth="16.0" layoutX="511.0" layoutY="471.0" opacity="0.45" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@img/palmera_main_4.png" />
+      </image>
+   </ImageView>
+</AnchorPane>
